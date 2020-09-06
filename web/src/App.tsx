@@ -1,9 +1,10 @@
 import React from 'react';
 import './assets/styles/global.css';
+import EmployeeManager from './EmployeeManager';
 
 function App() {
   return (
-    <h1>a</h1>
+    <EmployeeManager/>
   );
 }
 

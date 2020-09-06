@@ -1,8 +1,14 @@
 import React from 'react';
-
-class EmployeeManeger extends React.Component {
-
+import './styles.css'
+class EmployeeManager extends React.Component {
+    render() {
+        return(
+            <div id="employee-manager" className="container">
+                
+            </div>
+        )
+    }
 }
 
 
-export default EmployeeManeger;
+export default EmployeeManager;
