@@ -1,17 +1,18 @@
-.input-block {
+.select-block {
     position: relative;
     width: 100%;
 }
 
-.input-block + .input-block{
+.input-block + .select-block{
     margin-top: 1.4rem;
 }
 
-.input-block label {
-    font: 700 1.4rem Archivo;
+.select-block label {
+    font-weight: 700;
+    font-size: 1.4rem;
 }
 
-.input-block input {
+.select-block select {
     width: 92%;
     height: 5.6rem;
     margin-top: 0.8rem;
@@ -21,4 +22,5 @@
     outline: 0;
     padding: 0 1.6rem;
     font: 1.6rem Archivo;
+    cursor: pointer;
 }
