@@ -1,0 +1,26 @@
+.button-block {
+    min-width: 8rem;
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #373737;
+    box-shadow: 0.1rem 0.1rem 0.5rem #111111;
+    border: 0;
+    border-radius: 0.8rem;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.button-block .add-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.button-block:hover {
+    transform: scale(1.1);
+    background-color: #111111;
+}
