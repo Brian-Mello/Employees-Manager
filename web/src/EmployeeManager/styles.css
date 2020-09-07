@@ -1,5 +1,17 @@
 #employee-manager {
     width: 80%;
-    height: 90%;
+    max-width: 120rem;
+    height: 70%;
     background-color: #FFFFFF;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 1000px) {
+    #employee-manager {
+        min-height: 95%;
+        flex-direction: column;
+        padding: 0;
+    }
 }
