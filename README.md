@@ -17,4 +17,5 @@ Por ser um projeto typescript, há a necessidade do NodeJs. Com ele em sua máqu
 
 ## Instruções para testar os endpoints(Backend)	
 Utilize alguma ferramenta para testes de API. Ex: Postman, insomnia, etc.
+
 documentação do projeto no postman: https://documenter.getpostman.com/view/9731771/TVCjxRMz .
