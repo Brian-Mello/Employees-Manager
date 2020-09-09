@@ -2,17 +2,31 @@ import { Request, Response } from "express";
 import db from "../database/connection";
 import { v4 } from "uuid";
 
-export default class RolesController {
-    async roles(req: Request, res: Response) {
+export default class positionsController {
+    async positions(req: Request, res: Response) {
         try{
-            const roles = await db('roles')
-                .select('*');
-            
-            if(!roles) {
-                return [];
-            };       
+            const { orderBy, orderType} = req.query;
 
-            return res.status(200).json({ roles });
+            let positions;
+
+            if(orderBy && orderType) {
+                positions = await db('positions')
+                    .select('*')
+                    .orderBy(orderBy as string, orderType as string);
+            
+                if(!positions) {
+                    return [];
+                };
+            } else {
+                positions = await db('positions')
+                    .select('*');
+            
+                if(!positions) {
+                    return [];
+                }; 
+            };
+
+            return res.status(200).json({ positions });
         } catch(error) {
             res.status(400).send({
                 error_message: error.message
@@ -30,21 +44,21 @@ export default class RolesController {
                 throw new Error("Description must be provided!");
             };
 
-            const roleNameSearch = await db('roles')
+            const positionNameSearch = await db('positions')
                 .select("*")
                 .where('name', name);
 
-            if(roleNameSearch.length > 0){
-                throw new Error("Existing role!");
+            if(positionNameSearch.length > 0){
+                throw new Error("Existing position!");
             };
 
-            await db('roles').insert({
+            await db('positions').insert({
                 id: v4(),
                 name,
                 description
             });
 
-            res.status(201).send(`Role '${name}' created successfully!`);
+            res.status(201).send(`Position '${name}' created successfully!`);
         } catch(error) {
             res.status(400).send({
                 error_message: error.message
@@ -56,27 +70,26 @@ export default class RolesController {
         try{
             const { id } = req.params;
 
-            const roleIdSearch = await db('roles')
+            const positionIdSearch = await db('positions')
                 .select('*')
                 .where('id', id
             );
 
-            if(roleIdSearch.length === 0){
-                throw new Error("Role not found!");
+            if(positionIdSearch.length === 0){
+                throw new Error("Position not found!");
             };
 
-            console.log(id)
             await db('employees')
             .update(
-                'role_id', 'deleted'
+                'position_id', 'deleted'
             )
-            .where("role_id", id);
+            .where("position_id", id);
 
-            await db('roles')
+            await db('positions')
                 .delete()
                 .where({id});
 
-            res.status(200).send(`Role '${roleIdSearch.map(role => role.name)}' deleted successfully!`);
+            res.status(200).send(`Position '${positionIdSearch.map(position => position.name)}' deleted successfully!`);
         } catch(error) {
             res.status(400).send({
                 error_message: error.message
@@ -89,34 +102,34 @@ export default class RolesController {
             const { id } = req.params;
             const { name, description } = req.body;
 
-            const roleIdSearch = await db('roles')
+            const positionIdSearch = await db('positions')
                 .select('*')
                 .where('id', id);
 
-            if(roleIdSearch.length === 0){
-                throw new Error("Role not found!");
+            if(positionIdSearch.length === 0){
+                throw new Error("Position not found!");
             };
 
             if(name){
 
-                const roleNameSearch = await db('roles')
+                const positionNameSearch = await db('positions')
                     .select("*")
                     .where('name', name);
 
-                if(roleNameSearch.length > 0){
-                    throw new Error("Existing role name!");
+                if(positionNameSearch.length > 0){
+                    throw new Error("Existing position name!");
                 };
 
-                await db('roles')
+                await db('positions')
                     .update('name', name)
                     .where({id});
             } else if ( description ) {
-                await db('roles')
+                await db('positions')
                     .update('description', description)
                     .where({id});
             }
 
-            res.status(200).send(`Role '${roleIdSearch.map(role => role.name)}' updated successfully!`);
+            res.status(200).send(`Position '${positionIdSearch.map(position => position.name)}' updated successfully!`);
         } catch(error) {
             res.status(400).send({
                 error_message: error.message

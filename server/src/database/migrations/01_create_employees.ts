@@ -8,7 +8,7 @@ export async function up(knex: Knex) {
         table.string('birthdate').notNullable();
         table.string('salary').notNullable();
 
-        table.string('role_id').notNullable().references('id').inTable('roles');
+        table.string('position_id').notNullable().references('id').inTable('position');
     })
 }
 
