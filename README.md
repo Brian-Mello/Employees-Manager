@@ -2,7 +2,7 @@
 Projeto criado para a vaga de desenvolvedor Fullstack da 3LM Informática.
 
 ## Linguagens e serviços utilizados	
-**FRONTEND**: O Frontend foi criado utilizando React, Redux, Typescrit, HTML, CSS, Material-ui e React-reveal.
+**FRONTEND**: O Frontend foi criado utilizando React, Redux, Typescrit, HTML, CSS, axios, React-thunk, Material-ui e React-reveal.
 
 **BACKEND**: O Backend foi criado utilizando Typescript, NodeJs, knex, uudi, sqlite3 e cors.	
 
