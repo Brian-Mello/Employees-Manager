@@ -10,35 +10,6 @@ export default function EmployeesSection() {
                 <div className="employees">
                     <div className="employee-list">
                         <EmployeeCard name="Brian Mello" role="dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
-                        <EmployeeCard name="Brian" role="Dev"/>
                     </div>
                 </div>
                 <nav className="pagination-nav">
