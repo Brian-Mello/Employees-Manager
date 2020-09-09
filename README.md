@@ -2,9 +2,9 @@
 Projeto criado para a vaga de desenvolvedor Fullstack da 3LM Informática.
 
 ## Linguagens e serviços utilizados	
-**FRONTEND**: O Frontend foi criado utilizando React, Redux, Typescrit, HTML, CSS, axios, React-thunk, Material-ui e React-reveal.
+**FRONTEND**: O Frontend foi criado utilizando **React, Redux, Typescrit, HTML, CSS, axios, React-thunk, Material-ui e React-reveal**.
 
-**BACKEND**: O Backend foi criado utilizando Typescript, NodeJs, knex, uudi, sqlite3 e cors.	
+**BACKEND**: O Backend foi criado utilizando **Typescript, NodeJs, knex, uudi, sqlite3 e cors**.	
 
 ## Sobre(Backend)	
 A idéia do Backend desse Gerenciador de funcionários é trazer um crud(Create, Read, Update, Delete) no qual os usuários pudessem cadastrar, atualizar, deletar e ler os dados tanto dos funcionários quanto dos cargos.	
